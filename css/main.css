@@ -264,3 +264,133 @@ section .container .text p {
   width: 70%;
   font-size: 14px;
 }
+@media (max-width: 767px) {
+  .services .container {
+    flex-direction: column;
+  }
+  .services .container .serv-box {
+    display: block;
+  }
+  .services .container .serv-box .box {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 100px auto;
+  }
+  .services .container .serv-box .box i {
+    align-self: center;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .services .container .serv-box .box .text {
+    text-align: center;
+  }
+  .services .container .serv-box .box .text p {
+    width: 100%;
+    margin: 0px auto;
+  }
+}
+.protiflo {
+  padding: 100px 0px;
+  background-color: #eee;
+}
+.protiflo .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 50px;
+}
+.protiflo .container .box {
+  box-shadow: 0px 0px 4px #1f1818;
+  border-radius: 4px;
+}
+.protiflo .container .box .img img {
+  width: 100%;
+}
+.protiflo .container .box .text {
+  padding: 10px;
+}
+
+.protiflo .container .box .text h4 {
+  margin: 10px 0px;
+}
+
+.protiflo .container .box .text p {
+  font-size: 14px;
+  color: gray;
+  line-height: 1.6;
+}
+
+.about {
+  padding: 100px 0px;
+}
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .container .img {
+  position: relative;
+}
+.about .container .img::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  background-color: #eee;
+  height: calc(100% + 120px);
+  left: -10px;
+  z-index: 1;
+  top: -60px;
+}
+.about .container .img::after {
+  content: "L";
+  position: absolute;
+  color: var(--main-color);
+  font-size: 500px;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.about .container .img img {
+  width: 300px;
+}
+.about .container .text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 20px 0px;
+}
+.about .container .text hr {
+  background-color: var(--main-color);
+  color: var(--main-color);
+  height: 3px;
+  width: 60%;
+}
+.about .container .text p:first-child {
+  font-weight: bold;
+  color: black;
+}
+@media (max-width: 767px) {
+  .protiflo .container {
+    flex-direction: column;
+  }
+  .protiflo .container .box {
+    width: 100%;
+    margin: 30px auto;
+  }
+  .about .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about .container .img::before,
+  .about .container .img::after {
+    display: none;
+  }
+  .about .container .text p {
+    margin: 20px auto;
+  }
+  .about .container .text hr {
+    width: 100%;
+    margin: 20px auto;
+    height: 2px;
+  }
+}
